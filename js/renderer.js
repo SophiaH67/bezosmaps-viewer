@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { initControls } from './controls';
+import { initStats } from './stats';
 
 export const scene = new THREE.Scene();
 export const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -25,9 +26,11 @@ window.addEventListener('resize', () => {
 }, false)
 
 const updateControls = initControls(camera, renderer)
+const updateStats = initStats(camera, scene)
 
 function animate() {
   updateControls()
+  updateStats()
   requestAnimationFrame( animate );
   renderer.render( scene, camera );
 }

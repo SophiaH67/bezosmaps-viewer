@@ -4,10 +4,8 @@ canvas {
   left: 0;
 }
 
-#tooltip {
+label {
   position: absolute;
-  top: 0;
-  left: 0;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.3rem;
@@ -21,4 +19,19 @@ canvas {
   font-weight: bold;
   text-shadow: 0 0 10px #000;
   z-index: 10000;
+}
+
+
+#tooltip {
+  top: -100px;
+}
+
+#lookingat {
+  top: 1.6rem;
+  left: 0;
+}
+
+#coords {
+  top: 0;
+  left: 0;
 }
